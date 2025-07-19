@@ -1,1 +1,29 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monthly Report</title>
+</head>
+<body>
+    <h1>Monthly Financial Summary</h1>
+    <table border="1">
+        <tr>
+            <th>Account ID</th>
+            <th>Month</th>
+            <th>Category</th>
+            <th>Total Amount</th>
+            <th>Transaction Count</th>
+            <th>Anomalies</th>
+        </tr>
+        {% for row in tables %}
+        <tr>
+            <td>{{ row.accountId }}</td>
+            <td>{{ row.month }}</td>
+            <td>{{ row.category }}</td>
+            <td>{{ row.total_amount }}</td>
+            <td>{{ row.count }}</td>
+            <td>{{ row.anomalies }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
